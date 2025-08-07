@@ -11,5 +11,5 @@
 </p>
 
 <p align="center">
-  <h3> Codes will be released soon. </h3>
+  <h3> Code will be released soon. </h3>
 </p>
