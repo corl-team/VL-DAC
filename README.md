@@ -7,7 +7,7 @@
 [![Paper](https://img.shields.io/badge/Paper-arXiv%3A2508.04280-red)](https://arxiv.org/abs/2508.04280)
 
 <p align="center">
-  <img src="media/method_scheme-1.pdf" alt="method_scheme" width="100%" />
+  <img src="media/method_scheme-1.png" alt="method_scheme" width="100%" />
 </p>
 
 <p align="center">
