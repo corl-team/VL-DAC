@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="VL-DAC: Enhancing Vision-Language Model Training with Reinforcement Learning in Synthetic Worlds for Real-World Success">
+  <meta name="keywords" content="Vision-Language Models, Reinforcement Learning, VLM, Agents, AAMAS 2026">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#00d1b2">
+  <title>VL-DAC: Enhancing VLM Training with RL in Synthetic Worlds</title>
+  <link rel="icon" type="image/gif" href="static/images/smile.gif">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VL-DAC: Enhancing VLM Training with RL in Synthetic Worlds">
+  <meta property="og:description"
+    content="VL-DAC: Enhancing Vision-Language Model Training with Reinforcement Learning in Synthetic Worlds for Real-World Success">
+  <meta property="og:image" content="https://vl-dac.github.io/static/images/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Scripts -->
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  <script defer data-goatcounter="https://vl-dac.goatcounter.com/count" src="https://gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">Enhancing Vision-Language Model Training with Reinforcement
+                Learning in Synthetic Worlds for Real-World Success</h1>
+
+              <h3 class="title is-4 publication-venue">AAMAS 2026</h3>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">George Bredis,</span>
+                <span class="author-block">Stanislav Dereka,</span>
+                <span class="author-block">Viacheslav Sinii,</span>
+                <span class="author-block">Ruslan Rakhimov,</span>
+                <span class="author-block">Daniil Gavrilov</span>
+              </div>
+              <div class="is-size-6 publication-authors">
+                <span class="author-block">T-Tech</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2508.04280"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" aria-hidden="true">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+
+                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/corl-team/VL-DAC"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" aria-hidden="true">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+
+                  <a target="_blank" rel="noopener noreferrer" href="https://huggingface.co/papers/2508.04280"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon" aria-hidden="true">
+                      <img src="static/images/hf-logo.png" alt="" class="hf-logo">
+                    </span>
+                    <span>Hugging Face</span>
+                  </a>
+                </div>
+
+                <div class="hiring-cta-wrapper">
+                  <a href="https://www.tbank.ru/career/it/ml/research-scientist-v-ai-research-multimodal-ai/"
+                    target="_blank" rel="noopener noreferrer" class="hiring-cta">
+                    <span class="hiring-cta-action">We're hiring
+                      <svg class="hiring-cta-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        aria-hidden="true">
+                        <path d="M2.5 6H9.5M9.5 6L6.5 3M9.5 6L6.5 9" stroke="currentColor" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaser -->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body has-text-centered">
+          <img src="static/images/teaser.png" alt="VL-DAC skill transfer from synthetic training" width="1200"
+            height="400" class="teaser-image" fetchpriority="high" decoding="async">
+          <p class="subtitle has-text-centered teaser-caption">
+            <b>Skill transfer after synthetic training.</b> VL-DAC improves agentic control, spatial planning, and
+            embodied reasoning on BALROG, VSI-Bench, and ERQA—demonstrating effective transfer from synthetic
+            environments
+            to real-world skill benchmarks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Abstract -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Interactive multimodal agents must turn raw visual observations into reliable sequences of structured,
+                language-conditioned actions, yet training such competence under long horizons and sparse feedback
+                remains
+                brittle. We present <b>VL-DAC</b>, a lightweight reinforcement learning recipe for vision-language
+                agents
+                that is hyperparameter-robust and easy to deploy.
+              </p>
+              <p>
+                VL-DAC performs PPO updates at the <em>token level</em> for actions while learning a <em>step-level</em>
+                value function. This decoupling removes unstable weighting terms and yields faster, more reliable
+                convergence without introducing extra tuning knobs.
+              </p>
+              <p>
+                Training a single VLM in one cheap synthetic environment at a time (MiniWorld, Gym-Cards, ALFWorld, or
+                WebShop) produces policies that transfer beyond their training simulators: <b>+50% relative on
+                  BALROG</b>
+                (agentic control), <b>+5% relative on VSI-Bench hardest split</b> (spatial planning), and <b>+2% on
+                  VisualWebBench</b>
+                (web navigation), with no loss in general image understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Key Findings</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Experiments across lightweight simulators—MiniWorld, Gym-Cards, ALFWorld, and WebShop—demonstrate that
+            <b>transferable agentic skills can be reliably acquired by RL training</b> when two conditions are met:
+          </p>
+          <ul>
+            <li><b>Cheap simulators:</b> The simulator is inexpensive enough to enable broad exploration.</li>
+            <li><b>Robust RL algorithm:</b> The RL algorithm can be applied out-of-the-box without brittle
+              hyperparameter tuning.</li>
+          </ul>
+          <p>
+            The main bottleneck is not high-fidelity simulation, but the <em>practicality and hyperparameter
+              robustness</em> of the RL learning rule—a prerequisite for large-scale, reproducible experimentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Method -->
+    <section class="section section--shaded">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method: Vision-Language Decoupled Actor-Critic</h2>
+
+        <div class="content has-text-centered figure-container">
+          <img src="static/images/vldac.png" alt="VL-DAC pipeline" width="1000" height="350" loading="lazy"
+            decoding="async" class="figure-image--large">
+        </div>
+
+        <p class="content has-text-justified">
+          VL-DAC cleanly separates learning signals to enable stable, hyperparameter-free RL training:
+        </p>
+
+        <div class="columns section-columns">
+          <div class="column">
+            <div class="box">
+              <h4 class="title is-5">Token-Level Policy Loss</h4>
+              <p>PPO updates applied independently to each action token, enabling fine-grained credit assignment
+                without brittle weighting terms.</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <h4 class="title is-5">Step-Level Value Loss</h4>
+              <p>Value function computed once per environment step with gradients stopped at the VLM
+                backbone—eliminating cross-signal interference.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-4 section-title">Stabilization Techniques</h3>
+        <div class="content has-text-justified">
+          <ul>
+            <li><b>KL Regularization:</b> Per-token forward KL penalty to prevent policy drift.</li>
+            <li><b>Value Warm-up:</b> Warm up the value head before updating the policy.</li>
+            <li><b>Stop-Gradient:</b> Block gradients from value head into the backbone.</li>
+          </ul>
+          <p>
+            This minimal stabilization suite enables robust training at VLM scale—without the fragile,
+            environment-specific hyperparameters required by prior methods like RL4VLM or ArCHer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Stability -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Training Stability</h2>
+
+        <h3 class="title is-4">VL-DAC vs. RL4VLM</h3>
+
+        <div class="content has-text-centered figure-container">
+          <img src="static/images/average_comparison_max50000.png" alt="Training curves comparison" width="1200"
+            height="400" loading="lazy" decoding="async" class="figure-image">
+        </div>
+
+        <p class="content has-text-justified">
+          Success rates across six environments: MiniWorld (Hallway, OneRoom, FourRooms, WallGap), Gym-Cards/EZPoints,
+          and ALFWorld. While RL4VLM requires careful tuning of λ per environment, <b>VL-DAC performs robustly without
+            extra hyperparameter tuning</b>.
+        </p>
+
+        <h3 class="title is-4 section-title--large">Ablation Study</h3>
+
+        <div class="content has-text-centered figure-container">
+          <img src="static/images/success_rate_perstep_decrements_subplots.png" alt="Ablation study" width="800"
+            height="600" loading="lazy" decoding="async" class="figure-image--medium">
+        </div>
+
+        <p class="content has-text-justified">
+          Adding KL regularization, value warm-up, and stop-gradient sequentially reduces variance. Replacing the
+          step-level policy loss with VL-DAC's token-level objective further smooths learning and improves final
+          performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Long-Horizon Credit Assignment -->
+    <section class="section section--shaded">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Long-Horizon Credit Assignment</h2>
+
+        <h3 class="title is-4">VL-DAC vs. LOOP</h3>
+
+        <div class="content has-text-centered figure-container">
+          <img src="static/images/ours_vs_loop_comparison.png" alt="VL-DAC vs LOOP comparison" width="1200" height="300"
+            loading="lazy" decoding="async" class="figure-image">
+        </div>
+
+        <p class="content has-text-justified">
+          On sparse-reward MiniWorld tasks, LOOP's success rate plateaus within 15–30k steps due to high-variance
+          sequence-level gradients. <b>VL-DAC continues improving</b> throughout training by leveraging a step-level
+          critic for stable, well-shaped advantages.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skill Transfer Results -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Skill Transfer Results</h2>
+
+        <p class="content has-text-justified">
+          Training in a single lightweight simulator produces policies that transfer to diverse downstream benchmarks:
+        </p>
+
+        <div class="columns section-columns">
+          <div class="column">
+            <div class="box has-text-centered stat-box">
+              <p class="title is-2 stat-value--primary">+50%</p>
+              <p class="title is-5">BALROG</p>
+              <p class="is-size-6">Agentic control in game-like environments</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box has-text-centered stat-box">
+              <p class="title is-2 stat-value--info">+5%</p>
+              <p class="title is-5">VSI-Bench</p>
+              <p class="is-size-6">Hardest split: spatial planning & route reasoning</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box has-text-centered stat-box">
+              <p class="title is-2 stat-value--danger">+2%</p>
+              <p class="title is-5">VisualWebBench</p>
+              <p class="is-size-6">Web navigation and UI interaction</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-4 section-title--large">BALROG Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            Training with ALFWorld yields a <b>&gt;50% relative improvement</b> in agentic success, with further gains
+            under Chain-of-Thought prompting. Multi-step RL environments directly enable the emergence of complex,
+            agentic behavior.
+          </p>
+        </div>
+
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th scope="col">Benchmark</th>
+                <th scope="col">Base Model</th>
+                <th scope="col">ALFWorld-tuned</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BALROG (naive)</td>
+                <td>3.21% ± 0.75%</td>
+                <td><b>4.19% ± 0.92%</b></td>
+              </tr>
+              <tr>
+                <td>BALROG (CoT)</td>
+                <td>3.94% ± 0.98%</td>
+                <td><b>6.02% ± 1.19%</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="title is-4 section-title--large">General Benchmark Performance</h3>
+        <p class="content has-text-justified">
+          Crucially, VL-DAC training <b>maintains or improves</b> general image and video understanding across major
+          benchmarks (GQA, MMBench, MME, Video-MME, etc.)—no degradation in perception capabilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Environments -->
+    <section class="section section--shaded">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Environments</h2>
+
+        <div class="columns is-multiline section-columns">
+          <div class="column is-half">
+            <div class="box">
+              <p class="title is-5">MiniWorld</p>
+              <p>3D navigation tasks (Hallway, OneRoom, FourRooms, WallGap) for spatial reasoning and route planning.
+              </p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box">
+              <p class="title is-5">Gym-Cards / EZPoints</p>
+              <p>Card-selection logic environment for testing basic decision-making capabilities.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box">
+              <p class="title is-5">ALFWorld</p>
+              <p>Text-conditioned household tasks combining navigation, spatial reasoning, and agentic capabilities.
+              </p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box">
+              <p class="title is-5">WebShop</p>
+              <p>E-commerce browsing environment requiring long-term understanding and web-based planning.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="content has-text-justified section-text">
+          All environments produce RGB frames plus textual instructions. The agent responds with free-form text
+          (thoughts + actions) parsed into environment actions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Discussion -->
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Discussion</h2>
+
+        <h3 class="title is-4">A Two-Stage Roadmap</h3>
+        <div class="content has-text-justified">
+          <p>Our results outline a concise two-stage roadmap for converting a VLM into a competent interactive agent:
+          </p>
+          <ol>
+            <li><b>Stage 1 (Algorithmic):</b> Adopt a token-wise PPO objective with a step-level value head. This
+              decoupling eliminates brittle mixture coefficients and tuning-sensitive knobs.</li>
+            <li><b>Stage 2 (Environmental):</b> Expose the agent to lightweight simulators covering diverse action
+              spaces—navigation, manipulation, logic, and browser interaction.</li>
+          </ol>
+        </div>
+
+        <h3 class="title is-4 section-title">Why Simulator Diversity Matters</h3>
+        <div class="content has-text-justified">
+          <p>
+            Performance gains track the breadth of acquired skills. ALFWorld imparts agentic priors (+50% on BALROG),
+            MiniWorld contributes spatial planning (+5% on VSI-Bench), and WebShop injects UI-sequencing patterns (+2%
+            on VisualWebBench). Diverse simulators enable broad, transferable skill acquisition.
+          </p>
+        </div>
+
+        <h3 class="title is-4 section-title">Limitations</h3>
+        <div class="content has-text-justified">
+          <ul>
+            <li><b>Sparse-reward variance:</b> Still struggles in extremely sparse-reward settings.</li>
+            <li><b>Discrete actions only:</b> Continuous-control robotics remains untested.</li>
+            <li><b>Single-agent:</b> Multi-agent cooperation/competition not addressed.</li>
+            <li><b>Memory constraints:</b> Long-term abstract memory and planning (e.g., WallGap) remain challenging.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Citation -->
+    <section class="section section--shaded" id="citation">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">Citation</h2>
+        <div class="bibtex-container">
+          <button id="copy-bibtex-btn" class="copy-button" aria-label="Copy BibTeX citation">
+            <span class="icon" aria-hidden="true"><i class="fas fa-copy"></i></span>
+            <span class="copy-text" aria-live="polite">Copy</span>
+          </button>
+          <pre class="bibtex-code"><code id="bibtex-content">@misc{bredis2025enhancing,
+  title         = {Enhancing Vision-Language Model Training with Reinforcement Learning in Synthetic Worlds for Real-World Success},
+  author        = {Bredis, George and Dereka, Stanislav and Sinii, Viacheslav and Rakhimov, Ruslan and Gavrilov, Daniil},
+  year          = {2025},
+  eprint        = {2508.04280},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi           = {10.48550/arXiv.2508.04280},
+  url           = {https://arxiv.org/abs/2508.04280},
+  note          = {Accepted to AAMAS 2026 (to appear).}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link external-link" href="https://github.com/corl-team/VL-DAC" target="_blank"
+          rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              Website template borrowed and modified from <a href="https://github.com/nerfies/nerfies.github.io"
+                target="_blank" rel="noopener noreferrer">Nerfies</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
