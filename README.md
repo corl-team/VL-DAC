@@ -32,11 +32,20 @@ This repository contains the official implementation of **VL-DAC** (Vision-Langu
 ## Installation
 
 ```bash
-git clone https://github.com/your-repo/VL-DAC.git
+git clone https://github.com/corl-team/VL-DAC.git
 cd VL-DAC
 pip install -e .
 pip install -r requirements.txt
 ```
+
+> **Note:** For environments with visual rendering (MiniWorld, ALFWorld), you need to have `xvfb` installed on your system:
+> ```bash
+> # Ubuntu/Debian
+> sudo apt-get install xvfb
+> 
+> # Then run training with xvfb-run:
+> xvfb-run -a python main_modular.py --config configs/miniworld_qwen2vl.yaml
+> ```
 
 ### Environment-specific setup
 
