@@ -1,0 +1,72 @@
+# Configuration for WebShop environment with Qwen2VL model
+
+# Model configuration
+model:
+  path: "Qwen/Qwen2-VL-7B-Instruct"
+  cache_dir: null
+  use_peft: true
+  peft_config:
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.1
+
+# Environment configuration
+environment:
+  name: "webshop"
+  max_episode_steps: 50
+  max_image_obs_len: 2
+  prompt_version: "v1"
+
+# Training configuration
+training:
+  seed: 1
+  num_processes: 1
+  num_steps: 128
+  num_env_steps: 5000000
+
+# PPO configuration
+ppo:
+  ppo_epoch: 4
+  mini_batch_size: 1
+  clip_param: 0.1
+  entropy_coef: 0.01
+  value_loss_coef: 0.5
+  kl_beta: 0.04
+  gamma: 0.99
+  gae_lambda: 0.95
+  use_gae: true
+  use_proper_time_limits: true
+
+# Optimizer configuration
+optimizer:
+  init_lr: 0.000001
+  end_lr: 0.00000001
+  weight_decay: 0
+  eps: 0.0000001
+  lr_max_steps: 100
+  max_grad_norm: 0.01
+  grad_accum_steps: 2
+
+# Generation configuration
+generation:
+  max_new_tokens: 256
+  temperature: 0.2
+  thought_prob_coef: 1.0
+
+# Training modes
+modes:
+  value_warmup: "yes"
+  use_kl: "yes"
+  stop_grad: "yes"
+
+# Logging configuration
+logging:
+  save_path: "./runs/webshop_qwen2vl"
+  log_dir: "./runs/webshop_qwen2vl"
+  save_interval: 50
+  eval_num_per_episode: 50
+  use_wandb: false
+  wandb_project: "vlm-rl"
+  wandb_run: "webshop-qwen2vl"
+  debug: false
+
