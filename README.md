@@ -143,14 +143,14 @@ VL-DAC/
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@misc{bredis2025enhancingvisionlanguagemodeltraining,
-      title={Enhancing Vision-Language Model Training with Reinforcement Learning in Synthetic Worlds for Real-World Success}, 
-      author={George Bredis and Stanislav Dereka and Viacheslav Sinii and Ruslan Rakhimov and Daniil Gavrilov},
-      year={2025},
-      eprint={2508.04280},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2508.04280}, 
+@inproceedings{bredis2026vldac,
+  title     = {Enhancing Vision-Language Model Training with Reinforcement Learning in Synthetic Worlds for Real-World Success},
+  author    = {Bredis, George and Dereka, Stanislav and Sinii, Viacheslav and Rakhimov, Ruslan and Gavrilov, Daniil},
+  booktitle = {Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026)},
+  pages     = {2251--2260},
+  year      = {2026},
+  publisher = {International Foundation for Autonomous Agents and Multiagent Systems (IFAAMAS)},
+  doi       = {10.65109/RGPS3808},
 }
 ```
 
