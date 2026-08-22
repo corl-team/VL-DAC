@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "VL-DAC: Enhancing Vision-Language Model Training with Reinforcement Learning in Synthetic Worlds for Real-World Success"
+license: MIT
+url: "https://corl-team.github.io/VL-DAC/"
+repository-code: "https://github.com/corl-team/VL-DAC"
+authors:
+  - family-names: Bredis
+    given-names: George
+  - family-names: Dereka
+    given-names: Stanislav
+  - family-names: Sinii
+    given-names: Viacheslav
+  - family-names: Rakhimov
+    given-names: Ruslan
+  - family-names: Gavrilov
+    given-names: Daniil
+preferred-citation:
+  type: conference-paper
+  title: "Enhancing Vision-Language Model Training with Reinforcement Learning in Synthetic Worlds for Real-World Success"
+  authors:
+    - family-names: Bredis
+      given-names: George
+    - family-names: Dereka
+      given-names: Stanislav
+    - family-names: Sinii
+      given-names: Viacheslav
+    - family-names: Rakhimov
+      given-names: Ruslan
+    - family-names: Gavrilov
+      given-names: Daniil
+  collection-title: "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2026)"
+  publisher:
+    name: "International Foundation for Autonomous Agents and Multiagent Systems (IFAAMAS)"
+  start: 2251
+  end: 2260
+  year: 2026
+  doi: "10.65109/RGPS3808"
