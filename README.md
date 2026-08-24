@@ -2,7 +2,7 @@
 
 <div align="center">
 
-`George Bredis` | `Stanislav Dereka` | `Viacheslav Sinii` | `Ruslan Rakhimov` | `Daniil Gavrilov`
+[`George Bredis`](https://github.com/Natyren) | [`Stanislav Dereka`](https://github.com/stdereka) | [`Viacheslav Sinii`](https://github.com/ummagumm-a) | [`Ruslan Rakhimov`](https://github.com/rakhimovv) | [`Daniil Gavrilov`](https://github.com/kefirski)
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv%3A2508.04280-red)](https://arxiv.org/abs/2508.04280)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://corl-team.github.io/VL-DAC/)
